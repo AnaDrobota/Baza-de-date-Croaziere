@@ -1,0 +1,60 @@
+-- Query pentru croaziere cu vasul cu capacitate mai mare de 500
+SELECT Croaziera.ID_Croaziera, Croaziera.Denumire, Croaziera.Ruta, Croaziera.Data_inceput, Croaziera.Data_sfarsit, Vas.ID_Vas, Vas.Nume, Vas.Capacitate
+FROM Vas 
+INNER JOIN Croaziera ON Vas.ID_Vas = Croaziera.ID_Vas
+WHERE Vas.Capacitate > 500;
+
+-- Query pentru ofertele unui client cu ID 1
+SELECT Client.ID_Client, Client.Nume, Client.Prenume, Oferta.ID_Oferta, Oferta.Denumire, Oferta.Descriere
+FROM Client 
+INNER JOIN Oferta ON Client.ID_Client = Oferta.ID_Client
+WHERE Client.ID_Client = 1;
+
+-- Query pentru croaziere asociate unei oferte cu ID 5
+CREATE OR REPLACE ALGORITHM = UNDEFINED VIEW `Query pentru croaziere asociate unei oferte cu ID 5` AS
+SELECT 
+    Croaziera.ID_Croaziera, 
+    Croaziera.Denumire AS Denumire_Croaziera, 
+    Oferta.Denumire AS Denumire_Oferta
+FROM 
+    Oferta 
+INNER JOIN 
+    Croaziera ON Oferta.ID_Oferta = Croaziera.ID_Oferta 
+WHERE 
+    Croaziera.ID_Oferta = 5;
+
+
+-- Query pentru croaziere cu durata de cel puțin 7 zile
+SELECT Croaziera.ID_Croaziera, Croaziera.Denumire, Croaziera.Ruta, Croaziera.Durata
+FROM Croaziera
+WHERE Croaziera.Durata >= 7;
+
+-- Query pentru croaziere pe vasul specificat (prin numărul vasului)
+SELECT Croaziera.ID_Croaziera, Croaziera.Denumire, Croaziera.Ruta, Croaziera.Durata
+FROM Vas 
+INNER JOIN Croaziera ON Vas.ID_Vas = Croaziera.ID_Vas
+WHERE Vas.ID_Vas = 7;
+
+-- Query pentru ofertele într-o anumită perioadă de timp (01.01.2025 - 31.08.2025)
+SELECT Client.ID_Client, Client.Nume, Client.Prenume, Oferta.ID_Oferta, Oferta.Denumire, Oferta.Data_inceput, Oferta.Data_sfarsit
+FROM Client 
+INNER JOIN Oferta ON Client.ID_Client = Oferta.ID_Client
+WHERE Oferta.Data_inceput >= '2025-01-01' AND Oferta.Data_sfarsit <= '2025-08-31';
+
+-- Query pentru plăți efectuate de un client (ID 2)
+SELECT DISTINCT Plati.ID_Client, Client.Nume, Client.Prenume, Oferta.Denumire, Oferta.Pret
+FROM Client 
+INNER JOIN Oferta ON Client.ID_Client = Oferta.ID_Client
+INNER JOIN Plati ON Client.ID_Client = Plati.ID_Client
+WHERE Plati.ID_Client = 2;
+
+-- Query pentru angajați cu salarii mai mari sau egale cu 6000
+SELECT Angajat.ID_Angajat, Angajat.Nume, Angajat.Prenume, Salarii.Suma
+FROM Angajat 
+INNER JOIN Salarii ON Angajat.ID_Angajat = Salarii.ID_Angajat
+WHERE Salarii.Suma >= 6000;
+
+-- Query pentru ofertele cu preț mai mic sau egal cu 1500
+SELECT Oferta.ID_Oferta, Oferta.Denumire, Oferta.Descriere, Oferta.Pret, Oferta.Data_inceput, Oferta.Data_sfarsit
+FROM Oferta
+WHERE Oferta.Pret <= 1500;
