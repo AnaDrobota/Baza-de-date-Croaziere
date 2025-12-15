@@ -3,7 +3,8 @@
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Status](https://img.shields.io/badge/status-complete-success.svg?style=for-the-badge)
 
-A robust relational database system designed to manage the core operations of a cruise agency. This project handles bookings, fleet management, employee payroll, and supplier contracts using structured SQL best practices.
+A robust relational database system designed to manage the core operations of a cruise agency. This project covers cruise operations, fleet management, employee salary management, and supplier contracts using structured SQL best practices.
+
 
 ## 📋 Project Overview
 
@@ -21,7 +22,7 @@ Here is the Entity Relationship Diagram (ERD) showing the table relationships:
 The database `cruise_management` consists of the following key entities:
 
 * **Core:** `Client`, `Employee`, `Supplier`, `Ship`
-* **Business Logic:** `Offer`, `Cruise`, `Booking/Payment`
+* **Business Logic:** `Offer`, `Cruise`, `Payment`
 * **Financials:** `Salary`, `Contract`, `Payment`
 * **Marketing:** `Promotion`, `Point_of_Interest`
 
