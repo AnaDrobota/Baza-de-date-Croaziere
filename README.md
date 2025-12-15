@@ -16,7 +16,7 @@ This project simulates a backend database for a travel agency specializing in cr
 
 Here is the Entity Relationship Diagram (ERD) showing the table relationships:
 
-![Database Schema](./sql/schema.png)
+![Database Schema](./schema.png)
 
 The database `cruise_management` consists of the following key entities:
 
@@ -34,9 +34,8 @@ The database `cruise_management` consists of the following key entities:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/username/cruise-management-db.git](https://github.com/username/cruise-management-db.git)
+    git clone [https://github.com/AnaDrobota/cruise-management-db.git](https://github.com/AnaDrobota/cruise-management-db.git)
     ```
-    *(Note: Replace `username` with your actual GitHub username)*
 
 2.  **Import the Schema:**
     Open your SQL client (MySQL Workbench, DBeaver, phpMyAdmin) and run `01_schema.sql`.
