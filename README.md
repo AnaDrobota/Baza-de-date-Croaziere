@@ -14,6 +14,10 @@ This project simulates a backend database for a travel agency specializing in cr
 
 ## 🗂️ Database Schema
 
+Here is the Entity Relationship Diagram (ERD) showing the table relationships:
+
+![Database Schema](./schema.png)
+
 The database `cruise_management` consists of the following key entities:
 
 * **Core:** `Client`, `Employee`, `Supplier`, `Ship`
@@ -32,10 +36,14 @@ The database `cruise_management` consists of the following key entities:
     ```bash
     git clone [https://github.com/username/cruise-management-db.git](https://github.com/username/cruise-management-db.git)
     ```
+    *(Note: Replace `username` with your actual GitHub username)*
+
 2.  **Import the Schema:**
     Open your SQL client (MySQL Workbench, DBeaver, phpMyAdmin) and run `01_schema.sql`.
+
 3.  **Seed Data:**
     Run `02_seed.sql` to populate the tables with dummy data.
+
 4.  **Test Queries:**
     Execute `03_queries.sql` to see the reports generated.
 
@@ -51,4 +59,4 @@ The system can answer business questions such as:
 * **Language:** SQL (Structured Query Language)
 
 ---
-*Project developed for Database Systems Course - [Year]*
+*Project developed for Database Systems Course - 2024*
