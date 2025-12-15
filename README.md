@@ -16,7 +16,7 @@ This project simulates a backend database for a travel agency specializing in cr
 
 Here is the Entity Relationship Diagram (ERD) showing the table relationships:
 
-![Database Schema](./schema.png)
+![Database Schema](./sql/schema.png)
 
 The database `cruise_management` consists of the following key entities:
 
