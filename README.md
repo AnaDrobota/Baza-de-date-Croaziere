@@ -34,7 +34,7 @@ The database `cruise_management` consists of the following key entities:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/AnaDrobota/cruise-management-db.git](https://github.com/AnaDrobota/cruise-management-db.git)
+    git clone https://github.com/AnaDrobota/cruise-management-db.git
     ```
 
 2.  **Import the Schema:**
