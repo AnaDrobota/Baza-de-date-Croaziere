@@ -1,39 +1,54 @@
-# Cruise Management Database (MySQL)
+# 🚢 Cruise Management Database
 
-This project implements a relational database for managing cruise operations, including ships, cruises, clients, employees, offers, payments, promotions, and suppliers.
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/status-complete-success.svg?style=for-the-badge)
 
-The database was designed with a focus on data integrity, clear relationships between entities, and practical SQL queries for reporting and analysis.
+A robust relational database system designed to manage the core operations of a cruise agency. This project handles bookings, fleet management, employee payroll, and supplier contracts using structured SQL best practices.
 
-## Features
-- Relational schema with primary and foreign keys
-- Data integrity through constraints and indexes
-- Sample data for testing and demonstration
-- SQL queries with joins, filters, and aggregations
+## 📋 Project Overview
 
-## Database Structure
-The database includes the following main entities:
-- Ships (Vas)
-- Cruises (Croaziera)
-- Clients
-- Employees
-- Offers
-- Payments
-- Promotions
-- Salaries
-- Points of Interest
+This project simulates a backend database for a travel agency specializing in cruises. It was built to demonstrate proficiency in:
+* **Data Integrity:** Implementing complex constraints (`CHECK`, `UNIQUE`, `FOREIGN KEY`).
+* **Normalization:** Organizing data to reduce redundancy (3NF).
+* **Reporting:** Using SQL aggregations and Views for business insights.
 
-## Technologies
-- MySQL
-- SQL
-- phpMyAdmin / MySQL Workbench
+## 🗂️ Database Schema
 
-## How to Run
-1. Run `sql/01_schema.sql` to create the database schema
-2. Run `sql/02_seed.sql` to insert sample data
-3. Run `sql/03_queries.sql` to test example queries
+The database `cruise_management` consists of the following key entities:
 
-## Purpose
-This project was developed as an academic and practical exercise to strengthen skills in:
-- Relational database design
-- SQL queries and joins
-- Data validation and consistency
+* **Core:** `Client`, `Employee`, `Supplier`, `Ship`
+* **Business Logic:** `Offer`, `Cruise`, `Booking/Payment`
+* **Financials:** `Salary`, `Contract`, `Payment`
+* **Marketing:** `Promotion`, `Point_of_Interest`
+
+### Key Features
+* **Automated Consistency:** `ON UPDATE CASCADE` and `ON DELETE SET NULL` rules ensure references remain valid.
+* **Validation:** Dates are validated (End Date > Start Date) and amounts are checked for non-negativity at the database level.
+* **Performance:** Indexes created on all foreign keys to optimize JOIN operations.
+
+## 🚀 How to Run
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/username/cruise-management-db.git](https://github.com/username/cruise-management-db.git)
+    ```
+2.  **Import the Schema:**
+    Open your SQL client (MySQL Workbench, DBeaver, phpMyAdmin) and run `01_schema.sql`.
+3.  **Seed Data:**
+    Run `02_seed.sql` to populate the tables with dummy data.
+4.  **Test Queries:**
+    Execute `03_queries.sql` to see the reports generated.
+
+## 📊 Example Insights
+
+The system can answer business questions such as:
+* *Which ships have a capacity greater than 500 passengers?*
+* *What is the total revenue generated per client?*
+* *Which cruises are currently active or scheduled for next season?*
+
+## 🛠️ Tech Stack
+* **Database:** MySQL / MariaDB
+* **Language:** SQL (Structured Query Language)
+
+---
+*Project developed for Database Systems Course - [Year]*
